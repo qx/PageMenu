@@ -26,7 +26,7 @@ class RecentsTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        println("\(self.title) page: viewWillAppear")
+        print("\(self.title) page: viewWillAppear")
     }
     
     override func viewDidAppear(animated: Bool) {

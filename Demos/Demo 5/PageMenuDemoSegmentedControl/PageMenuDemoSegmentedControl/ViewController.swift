@@ -23,28 +23,28 @@ class ViewController: UIViewController, CAPSPageMenuDelegate {
         // Initialize view controllers to display and place in array
         var controllerArray : [UIViewController] = []
         
-        var controller1 : TestTableViewController = TestTableViewController(nibName: "TestTableViewController", bundle: nil)
+        let controller1 : TestTableViewController = TestTableViewController(nibName: "TestTableViewController", bundle: nil)
         controller1.parentNavigationController = self.navigationController
         controller1.title = "FAVORITES"
         controllerArray.append(controller1)
         
-        var controller2 : RecentsTableViewController = RecentsTableViewController(nibName: "RecentsTableViewController", bundle: nil)
+        let controller2 : RecentsTableViewController = RecentsTableViewController(nibName: "RecentsTableViewController", bundle: nil)
         controller2.title = "RECENTS"
         controller2.parentNavigationController = self.navigationController
         controllerArray.append(controller2)
         
-        var controller3 : RecentsTableViewController = RecentsTableViewController(nibName: "RecentsTableViewController", bundle: nil)
+        let controller3 : RecentsTableViewController = RecentsTableViewController(nibName: "RecentsTableViewController", bundle: nil)
         controller3.title = "FRIENDS"
         controller3.parentNavigationController = self.navigationController
         controllerArray.append(controller3)
         
-        var controller4 : RecentsTableViewController = RecentsTableViewController(nibName: "RecentsTableViewController", bundle: nil)
+        let controller4 : RecentsTableViewController = RecentsTableViewController(nibName: "RecentsTableViewController", bundle: nil)
         controller4.title = "OTHERS"
         controller4.parentNavigationController = self.navigationController
         controllerArray.append(controller4)
         
         // Customize menu (Optional)
-        var parameters: [CAPSPageMenuOption] = [
+        let parameters: [CAPSPageMenuOption] = [
             .MenuItemSeparatorWidth(4.3),
             .ScrollMenuBackgroundColor(UIColor.whiteColor()),
             .ViewBackgroundColor(UIColor(red: 247.0/255.0, green: 247.0/255.0, blue: 247.0/255.0, alpha: 1.0)),
@@ -64,59 +64,59 @@ class ViewController: UIViewController, CAPSPageMenuDelegate {
         // Initialize scroll menu
         pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
         
-        // Optional delegate 
+        // Optional delegate
         pageMenu!.delegate = self
         
         self.view.addSubview(pageMenu!.view)
     }
-
+    
     // Uncomment below for some navbar color animation fun using the new delegate functions
     
     func didMoveToPage(controller: UIViewController, index: Int) {
-        println("did move to page")
+        print("did move to page")
         
-//        var color : UIColor = UIColor(red: 18.0/255.0, green: 150.0/255.0, blue: 225.0/255.0, alpha: 1.0)
-//        var navColor : UIColor = UIColor(red: 17.0/255.0, green: 64.0/255.0, blue: 107.0/255.0, alpha: 1.0)
-//        
-//        if index == 1 {
-//            color = UIColor.orangeColor()
-//            navColor = color
-//        } else if index == 2 {
-//            color = UIColor.grayColor()
-//            navColor = color
-//        } else if index == 3 {
-//            color = UIColor.purpleColor()
-//            navColor = color
-//        }
-//        
-//        UIView.animateWithDuration(0.5, animations: { () -> Void in
-//            self.navigationController!.navigationBar.barTintColor = navColor
-//        }) { (completed) -> Void in
-//            println("did fade")
-//        }
+        //        var color : UIColor = UIColor(red: 18.0/255.0, green: 150.0/255.0, blue: 225.0/255.0, alpha: 1.0)
+        //        var navColor : UIColor = UIColor(red: 17.0/255.0, green: 64.0/255.0, blue: 107.0/255.0, alpha: 1.0)
+        //
+        //        if index == 1 {
+        //            color = UIColor.orangeColor()
+        //            navColor = color
+        //        } else if index == 2 {
+        //            color = UIColor.grayColor()
+        //            navColor = color
+        //        } else if index == 3 {
+        //            color = UIColor.purpleColor()
+        //            navColor = color
+        //        }
+        //
+        //        UIView.animateWithDuration(0.5, animations: { () -> Void in
+        //            self.navigationController!.navigationBar.barTintColor = navColor
+        //        }) { (completed) -> Void in
+        //            print("did fade")
+        //        }
     }
     
     func willMoveToPage(controller: UIViewController, index: Int) {
-        println("will move to page")
+        print("will move to page")
         
-//        var color : UIColor = UIColor(red: 18.0/255.0, green: 150.0/255.0, blue: 225.0/255.0, alpha: 1.0)
-//        var navColor : UIColor = UIColor(red: 17.0/255.0, green: 64.0/255.0, blue: 107.0/255.0, alpha: 1.0)
-//        
-//        if index == 1 {
-//            color = UIColor.orangeColor()
-//            navColor = color
-//        } else if index == 2 {
-//            color = UIColor.grayColor()
-//            navColor = color
-//        } else if index == 3 {
-//            color = UIColor.purpleColor()
-//            navColor = color
-//        }
-//        
-//        UIView.animateWithDuration(0.5, animations: { () -> Void in
-//            self.navigationController!.navigationBar.barTintColor = navColor
-//        }) { (completed) -> Void in
-//            println("did fade")
-//        }
+        //        var color : UIColor = UIColor(red: 18.0/255.0, green: 150.0/255.0, blue: 225.0/255.0, alpha: 1.0)
+        //        var navColor : UIColor = UIColor(red: 17.0/255.0, green: 64.0/255.0, blue: 107.0/255.0, alpha: 1.0)
+        //
+        //        if index == 1 {
+        //            color = UIColor.orangeColor()
+        //            navColor = color
+        //        } else if index == 2 {
+        //            color = UIColor.grayColor()
+        //            navColor = color
+        //        } else if index == 3 {
+        //            color = UIColor.purpleColor()
+        //            navColor = color
+        //        }
+        //        
+        //        UIView.animateWithDuration(0.5, animations: { () -> Void in
+        //            self.navigationController!.navigationBar.barTintColor = navColor
+        //        }) { (completed) -> Void in
+        //            print("did fade")
+        //        }
     }
 }

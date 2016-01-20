@@ -24,7 +24,7 @@ class TestTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        println("\(self.title) page: viewWillAppear")
+        print("\(self.title) page: viewWillAppear")
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -32,7 +32,7 @@ class TestTableViewController: UITableViewController {
         super.viewDidAppear(animated)
         self.tableView.showsVerticalScrollIndicator = true
         
-        println("favorites page: viewDidAppear")
+        print("favorites page: viewDidAppear")
     }
 
     override func didReceiveMemoryWarning() {
